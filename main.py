@@ -21,7 +21,7 @@ def get_games_with_x_stat(player_df, x, stat):
     
     return count
 
-all_time_great_list_file = open("/Users/Alex/Documents/github/nba-who-has-more/scripts/alltimegreats.txt","r")
+all_time_great_list_file = open("./scripts/alltimegreats.txt","r")
 
 ALL_TIMERS = []
 
@@ -41,8 +41,8 @@ while(True):
     while(player1 == player2):
         player2 = ALL_TIMERS[randint(0, 99)]
 
-    player1_df = pd.read_csv("/Users/Alex/Documents/github/nba-who-has-more/gamelogs/" + player1 + ".csv") 
-    player2_df = pd.read_csv("/Users/Alex/Documents/github/nba-who-has-more/gamelogs/" + player2 + ".csv") 
+    player1_df = pd.read_csv("./gamelogs/" + player1 + ".csv") 
+    player2_df = pd.read_csv("./gamelogs/" + player2 + ".csv") 
 
     stat = stat_combos[randint(0, len(stat_combos) - 1)]
 
